@@ -74,3 +74,5 @@ COPY *csv /root/
 COPY *py /root/
 COPY *sh /root/
 RUN chmod a+x /root/train.sh && chmod a+x /root/test.sh
+
+# RUN pip install GDAL

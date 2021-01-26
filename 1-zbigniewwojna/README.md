@@ -225,5 +225,18 @@ and have it execute against sample data:
 
 See train.sh, test.sh
 
+docker run -v ./koray:/root/koray myimage1:1.0
+docker run --rm -it  myimage1:1.0
+
+docker run --rm -it -v C:/_koray/temp/SpaceNet_SAR_Buildings_Solutions/1-zbigniewwojna/koray:/root/koray space1
+docker run --rm -it -v C:/_koray/temp/SpaceNet_SAR_Buildings_Solutions/1-zbigniewwojna:/root/code space1
 
 
+apt-get -y update && \
+apt-get -y install software-properties-common && \
+add-apt-repository -y ppa:ubuntugis/ppa && apt-get update && \
+apt-get -y install gdal-bin && \
+apt-get -y install libgdal-dev && \
+export CPLUS_INCLUDE_PATH=/usr/include/gdal && \
+export C_INCLUDE_PATH=/usr/include/gdal && \
+pip install GDAL==3.0.0 --upgrade
